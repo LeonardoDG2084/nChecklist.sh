@@ -6,7 +6,7 @@
 #                                          #                                                                                                                            
 # Programadores:                           #
 #   Leonardo D`Angelo Goncalves            #
-#   E-mail: leonardo.angelo@tivit.com.br   #
+#   E-mail: leonardodg@ig.com.br           #
 #                                          #
 #                                          #
 #                                          #
@@ -16,10 +16,10 @@
 # Configuracoes #
 #################
 
-dirScprt="/opt/tivit/scripts/"
-dirLog="/opt/tivit/log/checklist"                       # Diretorio onde ficarao os checklists
-dirArchive="/opt/tivit/log/checklist_archive"           # Diretorio onde ficarao os checklists compactados ou rotacionados
-dirSup="/opt/tivit/cockpit"                             # Diretorio onde serao retidas as info de suporte
+dirScprt="/opt/scripts/"
+dirLog="/opt/log/checklist"                       # Diretorio onde ficarao os checklists
+dirArchive="/opt/log/checklist_archive"           # Diretorio onde ficarao os checklists compactados ou rotacionados
+dirSup="/opt/cockpit"                             # Diretorio onde serao retidas as info de suporte
 bckFile="chkpath.bck"                                   # Arquivo onde ficam os paths para efetuar backup
 fmtFile=$(date +"%d-%m-%Y-%H-%M").$(hostname).checklist # Formato do arquivo de saida
 tempWebSumFile="$dirLog/tempWebSumFile"                 # Arquivo Web sumario temporario
@@ -160,10 +160,10 @@ printBoxFooter(){
 printBoxHeader(){
   tput clear
   echo -e '\e[31;1m ╔═══════════════════════════════════════╤═══════════════════════╗ \e[m'
-  echo -e '\e[31;1m ║ zzZZZZzzz OZ .Z.    .O..Z..zzZZZZzzz  │                       ║ \e[m'
-  echo -e '\e[31;1m ║    .Z.    OZ  .Z...8Z. .Z.    .Z.     │ Checklist             ║ \e[m'
-  echo -e '\e[31;1m ║    .Z.    OZ   .ZZZ.   .Z.    .Z.     │ Linux                 ║ \e[m'
-  echo -e '\e[31;1m ║    .Z.    OZ     Z.    .Z.    .Z.     │ Versao: 3.0           ║ \e[m'
+  echo -e '\e[31;1m ║                                       │                       ║ \e[m'
+  echo -e '\e[31;1m ║                                       │ Checklist             ║ \e[m'
+  echo -e '\e[31;1m ║                                       │ Linux                 ║ \e[m'
+  echo -e '\e[31;1m ║                                       │ Versao: 3.0           ║ \e[m'
   echo -e '\e[31;1m ╠═══════════════════════════════════════╧═══════════════════════╣ \e[m'
   echo -e '\e[31;1m ║                                                               ║ \e[m'
 }
@@ -171,7 +171,7 @@ printBoxHeader(){
 ######################################
 # Nome: printHdrWeb                  #
 #                                    #
-# Autor: leonardo.angelo@tivit.com.br#
+# Autor: leonardodg@ig.com.br        #
 #                                    #
 # Descrição                          #
 #                                    #
@@ -191,7 +191,7 @@ function printHdrWeb
 ######################################
 # Nome: printBtm                     #
 #                                    #
-# Autor: leonardo.angelo@tivit.com.br#
+# Autor: leonardodg@ig.com.br        #
 #                                    #
 # Descrição                          # 
 #                                    #
@@ -1428,7 +1428,7 @@ compareChecklist(){
 ######################################
 # Nome: bpBond                       #
 #                                    #
-# Autor: leonardo.angelo@tivit.com.br#
+# Autor: leonardodg@ig.com.br        #
 #                                    #
 # Descricao                          #
 #                                    #
@@ -1456,7 +1456,7 @@ bpBond()
 ######################################
 # Nome: bpntp                        #
 #                                    #
-# Autor: leonardo.angelo@tivit.com.br#
+# Autor: leonardodg@ig.com.br        #
 #                                    #
 # Descricao                          #
 #                                    #
@@ -1492,7 +1492,7 @@ bpNtp()
 ######################################
 # Nome: bpPuppet                     #
 #                                    #
-# Autor: leonardo.angelo@tivit.com.br#
+# Autor: leonardodg@ig.com.br        #
 #                                    #
 # Descricao                          #
 #                                    #
@@ -1523,7 +1523,7 @@ bpPuppet()
 ######################################
 # Nome: bpVmwareTool                 #
 #                                    #
-# Autor: leonardo.angelo@tivit.com.br#
+# Autor: leonardodg@ig.com.br        #
 #                                    #
 # Descricao                          #
 #                                    #
@@ -1555,7 +1555,7 @@ bpVmwareTool(){
 ######################################
 # Nome: bpNfsSoft                    #
 #                                    #
-# Autor: leonardo.angelo@tivit.com.br#
+# Autor: leonardodg@ig.com.br        #
 #                                    #
 # Descricao                          #
 #                                    #
@@ -1589,7 +1589,7 @@ bpNfsSoft()
 ######################################
 # Nome: bpVmNet                      # 
 #                                    #
-# Autor: leonardo.angelo@tivit.com.br#
+# Autor: leonardodg@ig.com.br        #
 #                                    #
 # Descricao                          #
 #                                    #
