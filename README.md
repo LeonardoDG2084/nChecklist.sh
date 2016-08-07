@@ -13,6 +13,7 @@ Seguem algumas caracteristicas do checklist
  - Archiving de checklists já gerados visando economia de espaço.
  - Comparação de checklists com o objetivo de verificar as diferenças.
 
+<<<<<<< HEAD
 Instalação
 
 1 - Alterar as seguintes variaveis dentro do script
@@ -27,6 +28,8 @@ dirSup="/opt/cockpit"                             # Diretorio de informação do
 3 - ./nChecklist.sh -m
 
 ===============================================================
+=======
+>>>>>>> master
 
 Seguem algumas informações capturadas
 
