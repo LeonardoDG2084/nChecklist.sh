@@ -19,8 +19,11 @@ Instalação
 1 - Alterar as seguintes variaveis dentro do script
 
 dirScprt="/opt/scripts/"                          # Diretorio onde deve ficar o script.
+
 dirLog="/opt/log/checklist"                       # Diretorio onde ficarão os checklists.
+
 dirArchive="/opt/log/checklist_archive"           # Diretorio onde ficarão os checklists compactados ou rotacionados.
+
 dirSup="/opt/cockpit"                             # Diretorio de informação do servidor.
 
 2 - Adicionar permissão de Execução
