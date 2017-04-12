@@ -160,10 +160,11 @@ printBoxFooter(){
 printBoxHeader(){
   tput clear
   echo -e '\e[31;1m ╔═══════════════════════════════════════╤═══════════════════════╗ \e[m'
-  echo -e '\e[31;1m ║                                       │                       ║ \e[m'
-  echo -e '\e[31;1m ║                                       │ Checklist             ║ \e[m'
-  echo -e '\e[31;1m ║                                       │ Linux                 ║ \e[m'
-  echo -e '\e[31;1m ║                                       │ Versao: 3.0           ║ \e[m'
+  echo -e '\e[31;1m ║ CCCCC H   H EEEEE CCCCC K   K         │                       ║ \e[m'
+  echo -e '\e[31;1m ║ C     H   H E     C     K  K          │ Checklist             ║ \e[m'
+  echo -e '\e[31;1m ║ C     HHHHH EEEE  C     KKK           │                       ║ \e[m'
+  echo -e '\e[31;1m ║ C     H   H E     C     K  K          │ Linux                 ║ \e[m'
+  echo -e '\e[31;1m ║ CCCCC H   H EEEEE CCCCC K   K         │ Versao: 3.0           ║ \e[m'
   echo -e '\e[31;1m ╠═══════════════════════════════════════╧═══════════════════════╣ \e[m'
   echo -e '\e[31;1m ║                                                               ║ \e[m'
 }
@@ -283,7 +284,6 @@ Recursos envolvidos:
 Janela de manutencao:
 Criticidade:
 DR:
-Administracao Tivit: 
 Localizacao:
 ACN:
 #################################################### 
