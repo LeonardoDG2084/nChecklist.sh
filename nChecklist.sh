@@ -1,7 +1,7 @@
 #!/bin/bash
 ############################################
 #                                          #
-#    CHECKLIST - Linux RHEL/SUSE           #
+#    CHECKLIST -                           #
 #                                          #                                                                                                                            
 #                                          #                                                                                                                            
 # Programadores:                           #
@@ -118,6 +118,7 @@ printbtm() {
 # Funcao para printar na tela, durante a criacao de um checklist   #
 # o status da coleta em forma de barra de progresso.               #
 ####################################################################
+
 printtitle() {
    # Quantidade de itens na barra de progresso
    spinnerTotal=$total
@@ -343,8 +344,8 @@ asmConnect()
 
 
 createChecklist(){
-    echo > $tempWebCheckFile
     checkUID
+    echo > $tempWebCheckFile
     testDirs
 
    ############
@@ -1850,10 +1851,10 @@ helpme(){
     echo -e "\e[m"
     echo "-------------------------------------------------------------------------------------"
     echo "-m = Cria um novo checklist"
-    echo "-q = Mesmo que -m, porem em silencio absoluto."
+    echo "-q = Mesmo que -m, porem sem verbose."
     echo "-v = Visualiza um checklist especifico"
     echo "-c = Compara 2 checklists utilizando 2 datas"
-    echo "-b = Executa o BestPractice"
+    echo "-b = Executa as funcoes de BestPractice"
     echo "-V = Exibe a versao do checklist"
     echo "-C = Exibe o changelog do checklist"
     echo "-B = Cria um tar com base nos caminhos contidos no arquivo 'chkpath.bck'"
@@ -1863,6 +1864,10 @@ helpme(){
     echo "     ROTATE que consta no script de checklist |Qtd atual= 10|"
     echo "-d = Deleta um checklist de uma data escolhida"
     echo "-h = Exibe esta mensagem de ajuda."
+    echo " "
+    echo " Exemplos de uso "
+    echo " "
+    echo " $0 -m (Cria um checklist das informações atuais do servidor) "
     echo "-------------------------------------------------------------------------------------"
     echo -e "\n"
 }
