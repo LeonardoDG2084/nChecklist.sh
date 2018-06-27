@@ -173,7 +173,7 @@ printBoxHeader(){
 ######################################
 # Nome: printHdrWeb                  #
 #                                    #
-# Autor: leonardodg@ig.com.br        #
+# Autor: leonardodg2084@gmail.com        #
 #                                    #
 # Descrição                          #
 #                                    #
@@ -193,7 +193,7 @@ function printHdrWeb
 ######################################
 # Nome: printBtm                     #
 #                                    #
-# Autor: leonardodg@ig.com.br        #
+# Autor: leonardodg2084@gmail.com        #
 #                                    #
 # Descrição                          # 
 #                                    #
@@ -1286,6 +1286,34 @@ createChecklist(){
    printBtmWeb
    printbtm 
 
+   #######
+   # arp #
+   #######
+
+   cmd=arp
+   chkTitle="Lista de Enderecos ARP"
+   count=46
+   printtitle
+   printhdr
+   printHdrWeb $cmd "$chkTitle"
+   arp -a | tee -a $dirLog/$cmd.$fmtFile >> $tempWebCheckFile
+   printBtmWeb
+   printbtm
+
+   ###########
+   # dmsetup #
+   ###########
+
+   cmd=dmsetup
+   chkTitle="Lista de device-mapper"
+   count=47
+   printtitle
+   printhdr
+   printHdrWeb $cmd "$chkTitle"
+   dmsetup ls ; dmsetup info ; dmsetup table | tee -a $dirLog/$cmd.$fmtFile >> $tempWebCheckFile
+   printBtmWeb
+   printbtm
+
    # Escrita nos arquivos do checklist WEB
 
    cat $tempWebSumFile > $finalWebFile
@@ -1429,7 +1457,7 @@ compareChecklist(){
 ######################################
 # Nome: bpBond                       #
 #                                    #
-# Autor: leonardodg@ig.com.br        #
+# Autor: leonardodg2084@gmail.com        #
 #                                    #
 # Descricao                          #
 #                                    #
@@ -1457,7 +1485,7 @@ bpBond()
 ######################################
 # Nome: bpntp                        #
 #                                    #
-# Autor: leonardodg@ig.com.br        #
+# Autor: leonardodg2084@gmail.com        #
 #                                    #
 # Descricao                          #
 #                                    #
@@ -1493,7 +1521,7 @@ bpNtp()
 ######################################
 # Nome: bpPuppet                     #
 #                                    #
-# Autor: leonardodg@ig.com.br        #
+# Autor: leonardodg2084@gmail.com        #
 #                                    #
 # Descricao                          #
 #                                    #
@@ -1524,7 +1552,7 @@ bpPuppet()
 ######################################
 # Nome: bpVmwareTool                 #
 #                                    #
-# Autor: leonardodg@ig.com.br        #
+# Autor: leonardodg2084@gmail.com        #
 #                                    #
 # Descricao                          #
 #                                    #
@@ -1556,7 +1584,7 @@ bpVmwareTool(){
 ######################################
 # Nome: bpNfsSoft                    #
 #                                    #
-# Autor: leonardodg@ig.com.br        #
+# Autor: leonardodg2084@gmail.com    #
 #                                    #
 # Descricao                          #
 #                                    #
@@ -1590,7 +1618,7 @@ bpNfsSoft()
 ######################################
 # Nome: bpVmNet                      # 
 #                                    #
-# Autor: leonardodg@ig.com.br        #
+# Autor: leonardodg2084@gmail.com    #
 #                                    #
 # Descricao                          #
 #                                    #
