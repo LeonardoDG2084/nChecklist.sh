@@ -6,7 +6,7 @@
 #                                          #                                                                                                                            
 # Programadores:                           #
 #   Leonardo D`Angelo Goncalves            #
-#   E-mail: leonardodg@ig.com.br           #
+#   E-mail: leonardodg2084@gmail.com       #
 #                                          #
 #                                          #
 #                                          #
