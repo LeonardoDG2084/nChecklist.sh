@@ -2,11 +2,18 @@
 
 Autor: Leonardo D'Angelo Gonçalves
 
-Projeto de Checklist Linux
+## Projeto de Checklist Linux
 
-Esse script tem como objetivo obter configuraçôes especificas do sistema operacional, como configuração de rede, rotas, pacotes, etc... para consulta futura ou comparar com outro checklist ja executado anteriormente.
+Esse script tem como objetivo obter configuraçôes especificas do sistema operacional, como configuração de rede, rotas, pacotes, etc...
 
-Seguem algumas caracteristicas do checklist
+### Uso do script
+
+ - Visão geral das configurações atuais do servidor
+ - Para assessment de novo servidores
+ - Comparar mudanças na configuração de servidores
+ - Historico de mudanças de configurações dos servidores
+
+### Seguem algumas caracteristicas do checklist
 
  - Geração de checklist.
  - Compactação de checklist para backup em um outro servidor.
@@ -14,7 +21,7 @@ Seguem algumas caracteristicas do checklist
  - Comparação de checklists com o objetivo de verificar as diferenças.
 
 
-Instalação
+### Instalação
 
 1 - Alterar as seguintes variaveis dentro do script
 
@@ -60,10 +67,17 @@ Seguem algumas informações capturadas
 - Hosts
 - resolv.conf
 - chkconfig
+- dmsetup
+- lsscsi
+- meminfo
+- cpuinfo
+- arp
+- lsof
 
 Sistemas Operacionais suportados
 
 - RedHat 5, 6 e 7
+- Ubuntu 14.xx até 18.xx
 - SLES 10, 11 e 12
 
 Plataformas
@@ -73,4 +87,4 @@ Plataformas
 
 RoadMap
 
-- Melhor suporte ao RHEL7
+- Melhor suporte ao RHEL7 e systemD
