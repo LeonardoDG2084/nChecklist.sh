@@ -648,6 +648,7 @@ createChecklist(){
    printhdr
    printHdrWeb $cmd ""$chkTitle""
    lspci -v  2> /dev/null | tee -a $dirLog/$cmd.$fmtFile >> $tempWebCheckFile
+   lspci -vv 2> /dev/null | tee -a $dirLog/$cmd.$fmtFile >> $tempWebCheckFile
    printbtm
    printBtmWeb
 
@@ -1310,9 +1311,126 @@ createChecklist(){
    printtitle
    printhdr
    printHdrWeb $cmd "$chkTitle"
-   dmsetup ls ; dmsetup info ; dmsetup table | tee -a $dirLog/$cmd.$fmtFile >> $tempWebCheckFile
+   dmsetup ls | tee -a $dirLog/$cmd.$fmtFile >> $tempWebCheckFile
+   dmsetup info | tee -a $dirLog/$cmd.$fmtFile >> $tempWebCheckFile
+   dmsetup table | tee -a $dirLog/$cmd.$fmtFile >> $tempWebCheckFile
    printBtmWeb
    printbtm
+
+   #########
+   # hostid #
+   #########
+
+   cmd=hostid
+   chkTitle="Id unico do servidor"
+   count=48
+   printtitle
+   printhdr
+   printHdrWeb $cmd "$chkTitle"
+   hostid | tee -a $dirLog/$cmd.$fmtFile >> $tempWebCheckFile
+   printBtmWeb
+   printbtm
+
+   ##########
+   # ipcs -a#
+   ##########
+
+   cmd=ipsc_a
+   chkTitle="iipcs - semaforos e shared memory"
+   count=49
+   printtitle
+   printhdr
+   printHdrWeb $cmd "$chkTitle"
+   ipcs -a | tee -a $dirLog/$cmd.$fmtFile >> $tempWebCheckFile
+   printBtmWeb
+   printbtm
+
+   ############
+   # iscsiadm #
+   ############
+
+   cmd=iscsiadm
+   chkTitle="Devices iSCSI"
+   count=50
+   printtitle
+   printhdr
+   printHdrWeb $cmd "$chkTitle"
+   iscsiadm -m session --info | tee -a $dirLog/$cmd.$fmtFile >> $tempWebCheckFile
+   printBtmWeb
+   printbtm
+
+   ########
+   # lsof #
+   ########
+
+   cmd=lsof
+   chkTitle="iLista de arquivos abertos "
+   count=51
+   printtitle
+   printhdr
+   printHdrWeb $cmd "$chkTitle"
+   lsof | tee -a $dirLog/$cmd.$fmtFile >> $tempWebCheckFile
+   printBtmWeb
+   printbtm 
+
+   ##########
+   # lsscsi #
+   ##########
+
+   cmd=ls
+   chkTitle="Lista de dispositivos scsi"
+   count=52
+   printtitle
+   printhdr
+   printHdrWeb $cmd "$chkTitle"
+   lsscsi -c -l -k | tee -a $dirLog/$cmd.$fmtFile >> $tempWebCheckFile
+   lsscsi -H -v -d -g | tee -a $dirLog/$cmd.$fmtFile >> $tempWebCheckFile
+   lsscsi -v -d -g | tee -a $dirLog/$cmd.$fmtFile >> $tempWebCheckFile
+   printBtmWeb
+   printbtm
+  
+   ###########
+   # udevadm #
+   ###########
+
+   cmd=udevadm
+   chkTitle="UDEV"
+   count=53
+   printtitle
+   printhdr
+   printHdrWeb $cmd "$chkTitle"
+   udevadm info --export-db | tee -a $dirLog/$cmd.$fmtFile >> $tempWebCheckFile
+   printBtmWeb
+   printbtm 
+
+   ###########
+   # cpuinfo #
+   ###########
+
+   cmd=cpuinfo
+   chkTitle="CPU Info"
+   count=54
+   printtitle
+   printhdr
+   printHdrWeb $cmd "$chkTitle"
+   cat /proc/cpuinfo | tee -a $dirLog/$cmd.$fmtFile >> $tempWebCheckFile
+   printBtmWeb
+   printbtm
+
+   ###########
+   # meminfo #
+   ###########
+
+   cmd=meninfo
+   chkTitle="Informacoes de memoria"
+   count=54
+   printtitle
+   printhdr
+   printHdrWeb $cmd "$chkTitle"
+   cat /proc/meninfo | tee -a $dirLog/$cmd.$fmtFile >> $tempWebCheckFile
+   printBtmWeb
+   printbtm
+
 
    # Escrita nos arquivos do checklist WEB
 
