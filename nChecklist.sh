@@ -1421,13 +1421,13 @@ createChecklist(){
    # meminfo #
    ###########
 
-   cmd=meninfo
+   cmd=meminfo
    chkTitle="Informacoes de memoria"
    count=54
    printtitle
    printhdr
    printHdrWeb $cmd "$chkTitle"
-   cat /proc/meninfo | tee -a $dirLog/$cmd.$fmtFile >> $tempWebCheckFile
+   cat /proc/meminfo | tee -a $dirLog/$cmd.$fmtFile >> $tempWebCheckFile
    printBtmWeb
    printbtm
 
